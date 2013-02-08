@@ -1,5 +1,8 @@
-*
-!.gitignore
-!Cheffile
-!README.md
-!Vagrantfile
+.DS_Store
+.vagrant
+Cheffile.lock
+cookbooks/
+data_bags/*
+tmp/
+wwwroot/
+!data_bags/README.md

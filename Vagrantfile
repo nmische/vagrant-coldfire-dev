@@ -81,7 +81,7 @@ Vagrant::Config.run do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
-    # chef.data_bags_path = "data_bags"
+    chef.data_bags_path = "data_bags"
     chef.log_level = :debug
 
     chef.add_recipe "apt"
@@ -120,6 +120,15 @@ Vagrant::Config.run do |config|
           }
         }
       },
+      ## Put your ColdFire repo settings here. ##
+      #  "coldire-dev" => {
+      #    "git" => {
+      #      "repository" => "",
+      #      "revision" => "",
+      #      "deployment_key" => ""
+      #    }
+      #  },
+      ## # # # # # # # # # # # # # # # # # # # ##
       "java" => {
         "install_flavor" => "oracle",
         "java_home" => "/usr/lib/jvm/java-6-oracle",
